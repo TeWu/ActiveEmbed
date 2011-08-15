@@ -6,16 +6,16 @@ Gem::Specification.new do |s|
   s.name        = "active_embedd"
   s.version     = ActiveEmbedd::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["TeWu"]
+  s.email       = ["wm.tewu@poczta.fm"]
+  s.homepage    = "https://github.com/TeWu"
+  s.summary     = %q{"Embeddable Value" design pattern implementation for ActiveRecord}
+  s.description = %q{Allows to embedd PORO in Rails-Model class}
 
-  s.rubyforge_project = "active_embedd"
+  #s.rubyforge_project = "active_embedd"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ["lib"]
 end
