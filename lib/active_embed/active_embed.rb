@@ -1,6 +1,6 @@
-module ActiveEmbedd
-  module CanEmbedd
-    def embedds(part_prefix, options = {})
+module ActiveEmbed
+  module CanEmbed
+    def embeds(part_prefix, options = {})
       options.assert_valid_keys(:class_name)
 
       part_prefix     = part_prefix.to_s

@@ -1,4 +1,4 @@
 source "http://rubygems.org"
 
-# Specify your gem's dependencies in active_embedd.rb.gemspec
+# Specify your gem's dependencies in active_embed.gemspec
 gemspec
