@@ -13,7 +13,7 @@ gem 'active_embed', :git => 'git://github.com/TeWu/ActiveEmbed.git'
 
 First generate model and run migration:
 
-	rails g model Post content:text author_name:string author_age:integer`
+	rails g model Post content:text author_name:string author_age:integer
 	rake db:migrate
   
 Then create `Author` class, with will be embedded in `Post` model:
@@ -45,7 +45,7 @@ module MyApp
 end
 ```
 
-Finally embed `Author` class in `Post` model so it can use Post's `author_*` attributes:
+Finally embed `Author` class in `Post` model so Author can use Post's `author_*` attributes:
 
 ``` ruby
 class Post < ActiveRecord::Base
