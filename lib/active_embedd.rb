@@ -1,0 +1,3 @@
+module ActiveEmbedd
+  # Your code goes here...
+end
