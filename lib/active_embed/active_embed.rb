@@ -1,11 +1,10 @@
 module ActiveEmbed
   module CanEmbed
     def embeds(part_prefix, options = {})
-      options.assert_valid_keys(:class_name)
+      options.assert_valid_keys(:class)
 
-      part_prefix     = part_prefix.to_s
-      part_class_name = options[:class_name] || part_prefix.camelize
-      part_class      = part_class_name.constantize
+      part_prefix = part_prefix.to_s
+      part_class  = options[:class] || part_prefix.camelize.constantize
 
       class_eval do
         define_method(part_prefix) do
