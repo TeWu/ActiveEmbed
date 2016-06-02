@@ -16,7 +16,7 @@ First generate model and run migration:
 	rails g model Post content:text author_name:string author_age:integer
 	rake db:migrate
   
-Then create `Author` class, with will be embedded in `Post` model:
+Then create `Author` class, which will be embedded in `Post` model:
 
 ``` ruby
 class Author
@@ -27,7 +27,7 @@ class Author
   end
 end
 ```
-Make sure that this class is loaded with your app eg. put it in the `lib` directory and change `config/application.rb` file like this:
+Make sure that this class is loaded with your app, e.g. put it in the `lib` directory, and change `config/application.rb` file like this:
 
 ``` ruby
 ...
@@ -45,14 +45,14 @@ module MyApp
 end
 ```
 
-Finally embed `Author` class in `Post` model so Author can use Post's `author_*` attributes:
+Finally embed `Author` class in `Post` model, so that `Author` can use `Post`'s `author_*` attributes:
 
 ``` ruby
 class Post < ActiveRecord::Base
   embeds :author
 end
 ```
-Now you can run `rails console` and do fallowing:
+Now you can run `rails console`, and do fallowing:
 
 	ruby-1.9.2-p180 :001 > p = Post.new :author_name => "Tom"
 	 => #<Post id: nil, content: nil, author_name: "Tom", author_age: nil, created_at: nil, updated_at: nil> 
